@@ -1,0 +1,34 @@
+@media screen and (max-width: 992px){
+  
+    .portfolio-second-content .blog-box{
+        width: 80%;
+        padding-bottom: 4rem;
+    }
+}
+@media screen and (max-width: 768px){
+  
+    .homeContent h1{
+        font-size: 3rem;
+        margin-bottom: 1rem;
+        padding-top: 5rem;
+    }
+    
+    .homeContent h2{
+        font-size: 2rem;
+        padding-bottom: 4rem;
+    
+    }
+
+    .portfolio-second-content .blog-box{
+        width: 80%;
+
+    }
+
+    .testmonial-img{
+        margin-top: 2rem;
+        margin-bottom: 12rem;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    
+}

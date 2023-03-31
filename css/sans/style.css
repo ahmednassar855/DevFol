@@ -1,0 +1,140 @@
+
+
+
+:root {
+    --widthContainer :85%;
+    --container-first :  #F5F5F5;
+    --padding-top-ten : 4rem;
+    --margin-bottom-eight : 1rem;
+    --margin-2rem :2rem;
+
+    --two-rem: 2rem;
+    --four-rem: 4rem;
+
+    --barColor: #0078ff;
+    --barColorLight: #cde1f8;
+  }
+ 
+ .home{
+    height: 100vh;
+    background-image: url(..//images/hero-bg.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+    color: white;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContent h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.homeContent h2{
+    font-size: 3rem;
+
+}
+.navbar-Main{
+    width: 100%;
+    position: fixed;
+}
+
+.navbar-container{
+    width: var(--widthContainer);
+}
+
+.navbar-Main-ul li{
+    position: relative;
+}
+.navbar-Main-ul a::after{
+    content: "";
+    border-bottom: 1px black solid;
+    position: absolute;
+    width: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-Main-ul a:hover::after{
+    content: "";
+    width: 100%;
+}
+
+/*  about section */
+.about{
+    background-color :var(--container-first);   
+    padding-top: var(--four-rem); 
+}
+
+.about .content{
+    width: var(--widthContainer); 
+    background-color: white;
+    margin-top: 20px;
+    overflow: none;
+    /* background-color: aqua; */
+    /* padding-top: var(--padding-top-ten); */
+    /* height: 300px; */
+}
+
+.left-section ul{
+    list-style: none;
+}
+.left-section li{
+    list-style: none;
+    margin-bottom:  1rem;
+    font-weight: bolder;
+}
+
+.left-section li span{
+    margin: 10px;
+    font-weight: 600;
+}
+
+.skills h2{
+    font-size: 1rem;
+    margin-top: calc(2 * 1rem);
+    position: relative;
+    padding-bottom: 1rem;
+}
+.skills .skillbar::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0%;
+    background-color:var(--barColorLight);
+    height: 0.5rem;
+}
+.skills .skillbar::before{
+    content: "";
+    position: absolute;
+    z-index: 9999999;
+    top:77%;
+    bottom: 0%;
+    left: 0;
+    right: 10%;
+    background-color:var(--barColor);
+    height: 0.5rem;
+}
+
+.skills .skillbar:nth-child(1)::before{
+    right: 15%;
+}
+
+.skills .skillbar:nth-child(2)::before{
+    right: 25%;  
+}
+
+.skills .skillbar:nth-child(3)::before{
+    right: 50%;
+   
+}
+
+.skills .skillbar:nth-child(4)::before{
+    right: 10%;
+   
+}

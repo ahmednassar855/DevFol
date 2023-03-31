@@ -1,0 +1,535 @@
+@font-face {
+    font-family: serif-regular;
+    src: url(../css/sans/Lato-Regular.ttf);
+}
+
+@font-face {
+    font-family: serif-bold;
+    src: url(../css/sans/Lato-Bold.ttf);
+}
+
+@font-face {
+    font-family: serif-boldItalic;
+    src: url(../css/sans/Lato-BoldItalic.ttf);
+}
+
+@font-face {
+    font-family: serif-thin;
+    src: url(../css/sans/Lato-Thin.ttf);
+}
+
+
+*{
+    font-family: serif-regular;
+}
+:root {
+    --widthContainer :85%;
+    --container-first :  #F5F5F5;
+    --padding-top-ten : 4rem;
+    --margin-bottom-eight : 1rem;
+    --margin-2rem :2rem;
+
+    --two-rem: 2rem;
+    --four-rem: 4rem;
+
+    --barColor: #0078ff;
+    --barColorLight: #cde1f8;
+    
+    --ColorObacity: rgba(0, 120, 255 , 0.7); 
+  }
+ 
+ .home{
+    height: 100vh;
+    background-image: url(..//images/hero-bg.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+    background-position: center;
+    color: white;
+    display:flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeContent h1{
+    font-size: 4rem;
+    margin-bottom: 1rem;
+}
+
+.homeContent h2{
+    font-size: 3rem;
+}
+
+.homeContent h2::after{
+    content: "";
+    animation: typing 10s alternate;
+}
+
+@keyframes typing {
+    0%{
+        content: "De";
+    }
+
+    10%{
+        content: "Desi|";
+    }
+    15%{
+        content: "Desi";
+    }
+    20%{
+        content: "Design|";
+    }
+
+    25%{
+        content: "Designer";
+    }
+
+    25%{
+        content: "Designer";
+    }
+
+    25%{
+        content: "Designer";
+    }
+    
+    30%{
+        content: "Design|";
+    }
+    
+    35%{
+        content: "Desi";
+    }
+    
+    40%{
+        content: "De|";
+    }
+    45%{
+        content: "Deve";
+    }
+    
+    50%{
+        content: "Develo|";
+    }
+    
+    55%{
+        content: "Developer";
+    }
+
+    60%{
+        content: "Develop|";
+    }
+    
+    65%{
+        content: "Devel";
+    }
+
+    
+    70%{
+        content: "De|";
+    }
+
+    
+    75%{
+        content: "|";
+    }
+    
+    80%{
+        content: "Fr";
+    }
+
+
+    85%{
+        content: "Free|";
+    }
+
+    
+    90%{
+        content: "Freela";
+    }
+
+    
+    95%{
+        content: "Freelanc|";
+    }
+
+    
+    100%{
+        content: "Freelancer";
+    }
+}
+
+
+.navbar-Main{
+    width: 100%;
+    position: fixed;
+    z-index: 99999;
+}
+ 
+ .navbar-container{
+    width: var(--widthContainer);
+} 
+
+.navbar-Main-ul li{
+    position: relative;
+}
+.navbar-Main-ul a::after{
+    content: "";
+    border-bottom: 1px black solid;
+    position: absolute;
+    width: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: all 0.3s ease-in-out 0s;
+}
+
+.navbar-Main-ul a:hover::after{
+    content: "";
+    width: 100%;
+}
+
+/*  about section */
+.about{
+    background-color :var(--container-first);   
+    padding-top: var(--four-rem); 
+}
+
+.about .content{
+    width: var(--widthContainer); 
+    background-color: white;
+    margin-top: 20px;
+}
+
+.left-section ul{
+    list-style: none;
+}
+.left-section li{
+    list-style: none;
+    margin-bottom:  1rem;
+    font-weight: bolder;
+}
+
+.left-section li span{
+    margin: 0.8rem;
+    font-weight: 100;
+}
+
+.skills h4{
+    font-size: 1rem;
+    margin-bottom: calc(1.5 * 1rem);
+    position: relative;
+    padding-bottom: 2rem;
+}
+.skills .skillbar::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0%;
+    background-color:var(--barColorLight);
+    height: 0.8rem;
+}
+.skills .skillbar::before{
+    content: "";
+    position: absolute;
+    z-index: 9999999;
+    top:75%;
+    bottom: 0%;
+    left: 0;
+    right: 10%;
+    background-color:var(--barColor);
+    height: 0.8rem;
+}
+
+.skills .skillbar:nth-child(1)::before{
+    right: 15%;
+}
+
+.skills .skillbar:nth-child(2)::before{
+    right: 25%;  
+}
+
+.skills .skillbar:nth-child(3)::before{
+    right: 50%;
+   
+}
+
+.skills .skillbar:nth-child(4)::before{
+    right: 10%;
+}
+
+.right-section h2{
+    position: relative;
+}
+
+.right-section h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color:var(--barColor);
+    height: 0.2rem;
+}
+
+.right-section p{
+    font-family: serif-thin;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    margin-top: 2rem;
+}
+
+/* services section */
+.services {
+    background-color: var(--container-first);
+}
+.services .content{
+    width: var(--widthContainer);
+}
+
+.service-first-content{
+    width: fit-content;
+}
+.service-first-content h2{
+    font-size: 3rem; 
+    font-family: serif-bold;
+    font-weight: 900;
+}
+
+.service-first-content p{
+    position: relative;
+    padding-bottom: 1rem;
+}
+.service-first-content p::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 10%;
+    background-color:var(--barColor);
+    height: 0.2rem;
+    transform: translate(-50%);
+    margin-top: 1rem;
+
+}
+
+
+.service-circle , .achieved-circle{
+    border: var(--barColor) 0.6rem solid ;
+    border-radius: 50%;
+    margin:auto;
+    width: fit-content;
+    margin-bottom: 1rem;
+}
+
+.service-icon i{
+    border: white  1rem solid;
+    border-radius:50% ;
+    padding: 1rem;
+    transition: all 1s;
+}
+
+.service-box:hover .service-icon i  {
+    background-color: var(--barColor);
+    border: #0078ff 1rem solid;
+    color: #F5F5F5;
+}
+
+
+.service-box:hover .service-circle{
+    border: var(--barColorLight) 0.6rem solid ;
+}
+
+/* achieved section */
+.achieved{
+    background-image: url(../images/counters-bg.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+
+.achieved-content{
+    width: 100%;
+    background-color: var(--ColorObacity)    
+}
+
+.achievedLayer{
+    width: var(--widthContainer);
+    color: #F5F5F5;
+}
+.achieved-circle{
+    border: #F5F5F5 0.6rem solid ;
+    border-radius: 50%;
+    padding: 1rem;
+    width: fit-content;
+    margin-bottom: 1rem; 
+}
+
+/*  Portfolio section */
+/* first content is similar to service first content section */
+
+.portfolio{
+    background-color: var(--container-first);
+}
+.portfolio-second-content{
+    width: var(--widthContainer);
+}
+
+.portfolio-box{
+    margin-bottom: 3rem;
+}
+
+.portfolio-content{
+    background-color: white;
+    font-size: small;
+}
+
+.portfolio-content span{
+    color: #0078ff;
+}
+
+.portfolio-content .icon i{
+    border: var(--barColor) 1px solid;
+    color: #0078ff;
+    padding: 0.6rem;
+    border-radius: 50%;
+}
+.work-image{
+    overflow: hidden;
+}
+.work-image img{
+    transition: all 1s;
+}
+
+.portfolio-box:hover  .work-image img{
+    transform:  scale(2);
+}
+
+/* summary section */
+
+.summary {
+    background-image: url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+    color: #F5F5F5;
+    
+}
+
+.summary-content {
+    width: 100%;
+    background-color: var(--ColorObacity);
+    padding-bottom: 4rem;    
+}
+
+.testmonial-img{
+    margin-top: 4rem;
+    margin-bottom: 12rem;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.carousel-item h2{
+    margin-top: 2rem;
+}
+
+
+/* Blog section */
+
+.card-test-img{
+    padding: 4px;
+    padding-right: 5px;
+    background-color:rgba(0, 0, 0, 0.03);
+
+}
+/* contact section */
+
+
+.contact{
+    background-image: url(../images/overlay-bg.jpg);
+    background-size: cover;
+    background-attachment:fixed;
+}
+
+.contact-content{
+    width: 100%;
+    padding-top: 4rem;
+    background-color: var(--ColorObacity);   
+}
+
+
+.contactSection{
+    width: var(--widthContainer);  
+    background-color: white;
+}
+
+
+.contactSection h2{
+    position: relative;
+    width: fit-content;
+    padding-bottom: 0.8rem;
+}
+.contactSection h2::after{
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 50%;
+    background-color:var(--barColor);
+    height: 0.2rem;
+}
+
+.contactSection form input , textarea{
+    width: 100%;
+    margin-top: 1rem;
+    padding: 0.3rem;
+}
+
+.contactSection p{
+    font-size: 1.4rem;
+    font-family: serif-thin;
+}
+
+
+.contactSection .firstIcon i{
+    color: #0078ff;
+}
+.contactSection .firstIcon span{ 
+    margin-left: 2rem;
+    font-family: serif-thin;
+}
+
+.contactSection .secondIcon i{
+    font-size: 2rem;
+    border: #0078ff 5px solid;
+    padding: 10px;
+    border-radius: 50%;
+    transition: all 1s;
+    margin-right: 0.5rem;
+}
+
+.contactSection .secondIcon i:hover{
+    border: var(--barColorLight) 5px solid;
+    background-color: #0078ff;
+}
+.contactSection button{
+    background-color: #0078ff;
+    color: #F5F5F5;
+    font-size: larger;
+    transition: all 1s;
+}
+
+.contactSection button:hover{
+  opacity: 0.7;
+  border: var(--barColorLight) 5px solid;
+}
+
+.footer{
+    background-color: #0062d3;
+    padding: 3rem;
+    color: #F5F5F5;
+    text-align: center;
+}
+
+
